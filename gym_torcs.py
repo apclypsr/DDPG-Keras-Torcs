@@ -16,7 +16,7 @@ class TorcsEnv:
 
     initial_reset = True
 
-    def __init__(self, vision=True, throttle=False, gear_change=False, counterTerminateLimit = 500):
+    def __init__(self, vision=True, throttle=False, gear_change=False, counterTerminateLimit = 30):
         self.vision = vision
         self.throttle = throttle
         self.gear_change = gear_change
@@ -132,6 +132,7 @@ class TorcsEnv:
               print("Termination Credits Exceeded")
               episode_terminate = True
               client.R.d['meta'] = True
+              self.counterTerminate = 0
 
 
         # Reward setting Here #######################################
@@ -143,7 +144,7 @@ class TorcsEnv:
         rpm = np.array(obs['rpm'])
 
         progress = sp*np.cos(obs['angle']) - np.abs(sp*np.sin(obs['angle'])) - sp * np.abs(obs['trackPos'])
-        reward = sp
+        reward = progress
 
         # collision detection: moved down to other condition
         # if obs['damage'] - obs_pre['damage'] > 0:
@@ -156,20 +157,19 @@ class TorcsEnv:
         if (abs(track.any()) > 1 or abs(trackPos) > 1):
             if (obs['speedX']) < .5:
                 if(obs['damage']) > 0:
-                    reward += -10
-                    print(obs['trackPos'])
+                    reward += -40
                     print('Wall Hit!')
 
-        if self.time_step > 100:
-            if (obs['speedX']) < .5:
+        if self.time_step > 30:
+            if (obs['speedX']) < 1:
                 if(obs['damage']) > 0:
                     self.counterTerminate += 1
-                    reward += -10
+                    reward += -40
                     print('Wall Hit!')
 
-        if self.time_step > 50:
-            if (obs['speedX']) < .5:
-                reward += -10
+        if self.time_step > 80:
+            if (obs['speedX']) < 1:
+                reward += -40
                 print('Slow Speed!')
                 self.counterTerminate += 1
 
@@ -188,7 +188,6 @@ class TorcsEnv:
 
         self.time_step += 1
         print('Speed: ', obs['speedX'])
-        print('Position: ', obs['distRaced'])
         return self.get_obs(), reward, client.R.d['meta'], {}
 
     def reset(self, relaunch=False):
@@ -275,7 +274,6 @@ class TorcsEnv:
         # limit = 4096
         # 128 x 128 = 16384
         limit = 16384
-        print('IMAGE VECTOR LENGTH : ', len(image_vec))
         for i in range(limit):
             temp.append(image_vec[i])
         return np.array(temp, dtype=np.uint8)
@@ -318,6 +316,7 @@ class TorcsEnv:
             # Get RGB from observation
             #image_rgb = self.obs_vision_to_image_rgb(raw_obs[names[8]])
             image_rgb = self.obs_vision_to_image_greyscale(raw_obs[names[12]])
+            print("image", image_rgb)
 
             return Observation(focus=np.array(raw_obs['focus'], dtype=np.float32) / 200.,
                                speedX=np.array(raw_obs['speedX'], dtype=np.float32) / 300.0,

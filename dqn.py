@@ -1,4 +1,3 @@
-import state
 import math
 import numpy as np
 import os
@@ -27,27 +26,32 @@ class GradientClippingOptimizer(tf.train.Optimizer):
 
 
 class DeepQNetwork:
-    def __init__(self, numActions, baseDir, args):
+    def __init__(self, numActions, sess, baseDir, args):
+
+        print(args)
+
+        self.sess = sess
 
         self.numActions = numActions
         self.baseDir = baseDir
-        self.saveModelFrequency = args.save_model_freq
-        self.targetModelUpdateFrequency = args.target_model_update_freq
-        self.normalizeWeights = args.normalize_weights
+        self.saveModelFrequency = args["save_model_freq"]
+        self.targetModelUpdateFrequency = args["target_model_update_freq"]
+        self.normalizeWeights = args["normalize_weights"]
 
         self.staleSess = None
 
         tf.set_random_seed(123456)
 
-        self.sess = tf.Session()
+        # we want to use the same session as the AC algorithm
+        # self.sess = tf.Session()
 
-        assert (len(tf.global_variables()) == 0), "Expected zero variables"
+        # assert (len(tf.global_variables()) == 0), "Expected zero variables"
         self.x, self.y = self.buildNetwork('policy', True, numActions)
-        assert (len(tf.trainable_variables()) == 10), "Expected 10 trainable_variables"
-        assert (len(tf.global_variables()) == 10), "Expected 10 total variables"
+        # assert (len(tf.trainable_variables()) == 10), "Expected 10 trainable_variables"
+        # assert (len(tf.global_variables()) == 10), "Expected 10 total variables"
         self.x_target, self.y_target = self.buildNetwork('target', False, numActions)
-        assert (len(tf.trainable_variables()) == 10), "Expected 10 trainable_variables"
-        assert (len(tf.global_variables()) == 20), "Expected 20 total variables"
+        # assert (len(tf.trainable_variables()) == 10), "Expected 10 trainable_variables"
+        # assert (len(tf.global_variables()) == 20), "Expected 20 total variables"
 
         # build the variable copy ops
         self.update_target = []
@@ -75,7 +79,7 @@ class DeepQNetwork:
         # Note tried gradient clipping with rmsprop with this particular loss function and it seemed to suck
         # Perhaps I didn't run it long enough
         # optimizer = GradientClippingOptimizer(tf.train.RMSPropOptimizer(args.learning_rate, decay=.95, epsilon=.01))
-        optimizer = tf.train.RMSPropOptimizer(args.learning_rate, decay=.95, epsilon=.01)
+        optimizer = tf.train.RMSPropOptimizer(args["learning_rate"], decay=.95, epsilon=.01)
         self.train_step = optimizer.minimize(self.loss)
 
         self.saver = tf.train.Saver(max_to_keep=25)
@@ -86,7 +90,7 @@ class DeepQNetwork:
 
         self.summary_writer = tf.summary.FileWriter(self.baseDir + '/tensorboard', self.sess.graph)
 
-        if args.model is not None:
+        if args['model'] is not None:
             print('Loading from model file %s' % (args.model))
             self.saver.restore(self.sess, args.model)
 
@@ -95,13 +99,14 @@ class DeepQNetwork:
         print("Building network for %s trainable=%s" % (name, trainable))
 
         # First layer takes a screen, and shrinks by 2x
-        x = tf.placeholder(tf.uint8, shape=[None, 84, 84, 4], name="screens")
+        x = tf.placeholder(tf.uint8, shape=[None, 128, 128, 4], name="screens")
         print(x)
 
         x_normalized = tf.to_float(x) / 255.0
         print(x_normalized)
 
         # Second layer convolves 32 8x8 filters with stride 4 with relu
+        # lzhang02: returns 128 31x31 layers
         with tf.variable_scope("cnn1_" + name):
             W_conv1, b_conv1 = self.makeLayerVariables([8, 8, 4, 32], trainable, "conv1")
 
@@ -110,39 +115,44 @@ class DeepQNetwork:
             print(h_conv1)
 
         # Third layer convolves 64 4x4 filters with stride 2 with relu
+        # lzhang02: change to 5x5 filter, returns 8192 14 x 14 layers
         with tf.variable_scope("cnn2_" + name):
-            W_conv2, b_conv2 = self.makeLayerVariables([4, 4, 32, 64], trainable, "conv2")
+            W_conv2, b_conv2 = self.makeLayerVariables([5, 5, 32, 64], trainable, "conv2")
 
             h_conv2 = tf.nn.relu(tf.nn.conv2d(h_conv1, W_conv2, strides=[1, 2, 2, 1], padding='VALID') + b_conv2,
                                  name="h_conv2")
             print(h_conv2)
 
         # Fourth layer convolves 64 3x3 filters with stride 1 with relu
-        with tf.variable_scope("cnn3_" + name):
-            W_conv3, b_conv3 = self.makeLayerVariables([3, 3, 64, 64], trainable, "conv3")
+        # lzhang02: change to 4x4 filter, returns
+        # with tf.variable_scope("cnn3_" + name):
+        #     W_conv3, b_conv3 = self.makeLayerVariables([4, 4, 64, 64], trainable, "conv3")
+        #
+        #     h_conv3 = tf.nn.relu(tf.nn.conv2d(h_conv2, W_conv3, strides=[1, 1, 1, 1], padding='VALID') + b_conv3,
+        #                          name="h_conv3")
+        #     print(h_conv3)
 
-            h_conv3 = tf.nn.relu(tf.nn.conv2d(h_conv2, W_conv3, strides=[1, 1, 1, 1], padding='VALID') + b_conv3,
-                                 name="h_conv3")
-            print(h_conv3)
-
-        h_conv3_flat = tf.reshape(h_conv3, [-1, 7 * 7 * 64], name="h_conv3_flat")
+        #flatten layer 2 instead
+        h_conv3_flat = tf.reshape(h_conv2, [-1, 14 * 14 * 64], name="h_conv3_flat")
+        print("SHAPE OF HCONV2", h_conv2)
         print(h_conv3_flat)
 
         # Fifth layer is fully connected with 512 relu units
         with tf.variable_scope("fc1_" + name):
-            W_fc1, b_fc1 = self.makeLayerVariables([7 * 7 * 64, 512], trainable, "fc1")
+            W_fc1, b_fc1 = self.makeLayerVariables([14 * 14 * 64, 512], trainable, "fc1")
 
             h_fc1 = tf.nn.relu(tf.matmul(h_conv3_flat, W_fc1) + b_fc1, name="h_fc1")
             print(h_fc1)
 
-        # Sixth (Output) layer is fully connected linear layer
-        with tf.variable_scope("fc2_" + name):
-            W_fc2, b_fc2 = self.makeLayerVariables([512, numActions], trainable, "fc2")
+        #We don't want to output a discrete number of actions, but rather the FC7 layer to feed into the Actor Critic Algorithm
+        # # Sixth (Output) layer is fully connected linear layer
+        # with tf.variable_scope("fc2_" + name):
+        #     W_fc2, b_fc2 = self.makeLayerVariables([512, numActions], trainable, "fc2")
+        #
+        #     y = tf.matmul(h_fc1, W_fc2) + b_fc2
+        #     print(y)
 
-            y = tf.matmul(h_fc1, W_fc2) + b_fc2
-            print(y)
-
-        return x, y
+        return x, h_fc1
 
     def makeLayerVariables(self, shape, trainable, name_suffix):
         if self.normalizeWeights:
@@ -162,6 +172,10 @@ class DeepQNetwork:
         y = self.sess.run([self.y], {self.x: screens})
         q_values = np.squeeze(y)
         return np.argmax(q_values)
+
+    def getFC7(self, screens):
+        y = self.sess.run([self.y], {self.x: screens})
+        return y
 
     def train(self, batch, stepNumber):
 
@@ -193,3 +207,17 @@ class DeepQNetwork:
             if not os.path.isdir(dir):
                 os.makedirs(dir)
             savedPath = self.saver.save(self.sess, dir + '/model', global_step=stepNumber)
+
+# lzhang02: commenting this out due to errors
+if __name__ == "__main__":
+
+    args = {'save_model_freq' : 10000,
+            'target_model_update_freq' : 10000,
+            'normalize_weights' : True,
+            'learning_rate' : .00025,
+            'model' : None}
+
+    print(args["save_model_freq"])
+
+    C= DeepQNetwork(19, '/home/lou/DDPG-Keras-Torcs', args=args)
+    print(C)

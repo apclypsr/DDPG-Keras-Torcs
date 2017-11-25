@@ -77,19 +77,21 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
 
         print("Episode : " + str(i) + " Replay Buffer " + str(buff.count()))
 
-        if np.mod(i, 500) == 0:
-            ob = env.reset(relaunch=True)   #relaunch TORCS every 500 episode because of the memory leak error
+        if np.mod(i, 601) == 0:
+            ob = env.reset(relaunch=True)   #relaunch TORCS every 601 episode because of the memory leak error
         else:
             ob = env.reset()
 
         s_t = np.hstack((ob.angle, ob.track, ob.trackPos, ob.speedX, ob.speedY,  ob.speedZ, ob.wheelSpinVel/100.0, ob.rpm))
      
         total_reward = 0.
+        speed = 0
+        stepreset = 0
+
         for j in range(max_steps):
-            loss = 0 
+            loss = 0
             epsilon -= 1.0 / EXPLORE
             a_t = np.zeros([1,action_dim])
-
 
             noise_t = np.zeros([1,action_dim])
             
@@ -99,9 +101,9 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
             noise_t[0][2] = train_indicator * max(epsilon, 0) * OU.function(a_t_original[0][2], -0.1 , 1.00, 0.05)
 
             #The following code do the stochastic brake
-            # if random.random() <= 0.05:
-            #    print("********Now we apply the brake***********")
-            #    noise_t[0][2] = train_indicator * max(epsilon, 0) * OU.function(a_t_original[0][2],  0.2 , 1.00, 0.10)
+            if random.random() <= 0.05:
+               print("********Now we apply the brake***********")
+               noise_t[0][2] = train_indicator * max(epsilon, 0) * OU.function(a_t_original[0][2],  0.2 , 1.00, 0.10)
 
             a_t[0][0] = a_t_original[0][0] + noise_t[0][0]
             a_t[0][1] = a_t_original[0][1] + noise_t[0][1]
@@ -141,12 +143,16 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
 
             total_reward += r_t
             s_t = s_t1
+            speed += ob.speedX*300
+            speedavg = speed/stepreset
         
-            print("Episode", i, "Step", step, "Action", a_t, "Reward", r_t, "Loss", loss)
-            esar = (i, step, a_t, r_t, loss)
+            print("Episode", i, "Step", step, "Action", a_t, "Reward", r_t, "Loss", loss, "Average Speed", speedavg)
+            esar = (i, step, a_t, r_t, loss, speedavg)
             esar2.append(esar)
         
             step += 1
+            stepreset += 1
+
             if done:
                 break
 
@@ -165,20 +171,20 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
         print("Total Step: " + str(step))
         print("")
 
-        esar3 = (i, step, total_reward)
+        esar3 = (i, step, total_reward, speedavg)
         esar4.append(esar3)
+
+        print("Saving esars.")
+
+        def save_object(obj, filename):
+            with open(filename, 'wb') as output:
+                pickle.dump(obj, output, pickle.HIGHEST_PROTOCOL)
+
+        save_object(esar2, 'IntraEpisode.pkl')
+        save_object(esar4, 'InterEpisode.pkl')
 
     env.end()  # This is for shutting down TORCS
     print("Finish.")
-    print("Saving esars.")
-
-    def save_object(obj, filename):
-        with open(filename, 'wb') as output:
-            pickle.dump(obj, output, pickle.HIGHEST_PROTOCOL)
-
-    save_object(esar2, 'IntraEpisode.pkl')
-    save_object(esar4, 'InterEpisode.pkl')
-
 
 if __name__ == "__main__":
     playGame()

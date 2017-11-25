@@ -15,10 +15,7 @@ HIDDEN2_UNITS = 600
 
 class CriticNetwork(object):
     def __init__(self, sess, state_size, action_size, BATCH_SIZE, TAU, LEARNING_RATE):
-
-
         self.sess = sess
-
 
         self.BATCH_SIZE = BATCH_SIZE
         self.TAU = TAU
@@ -48,8 +45,11 @@ class CriticNetwork(object):
 
     def create_critic_network(self, state_size,action_dim):
         print("Now we build the model")
-        S = Input(shape=[state_size])  
-        A = Input(shape=[action_dim],name='action2')   
+        # S = Input(shape=[state_size])
+        # A = Input(shape=[action_dim],name='action2')
+
+        S = Input(shape=[state_size])
+        A = Input(shape=[action_dim],name='action2')
         w1 = Dense(HIDDEN1_UNITS, activation='relu')(S)
         a1 = Dense(HIDDEN2_UNITS, activation='linear')(A) 
         h1 = Dense(HIDDEN2_UNITS, activation='linear')(w1)
