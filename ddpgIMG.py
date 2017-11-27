@@ -1,7 +1,7 @@
 from gym_torcs import TorcsEnv
 import numpy as np
 import random
-from dqn import DeepQNetwork
+from dqnSERGIO import DeepQNetwork
 
 
 import pickle
@@ -187,6 +187,11 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
 
             if (train_indicator):
                 states = np.reshape(states, (-1, 512))
+
+                print('STATESSHAPE', np.shape(states))
+                print('ACTIONSSHAPE', np.shape(actions))
+                print('YT', np.shape(y_t))
+
                 loss += critic.model.train_on_batch([states,actions], y_t) 
                 a_for_grad = actor.model.predict(states)
                 grads = critic.gradients(states, a_for_grad)

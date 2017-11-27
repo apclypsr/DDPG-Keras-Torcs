@@ -146,9 +146,9 @@ class TorcsEnv:
         progress = sp*np.cos(obs['angle']) - np.abs(sp*np.sin(obs['angle'])) - sp * np.abs(obs['trackPos'])
         reward = progress
 
-        # collision detection: moved down to other condition
-        # if obs['damage'] - obs_pre['damage'] > 0:
-        #     reward = -1
+        #collision detection: moved down to other condition
+        if obs['damage'] - obs_pre['damage'] > 0:
+            reward = -1
 
         # Termination judgement #########################
         # Episode is terminated if the car is out of track
@@ -181,6 +181,8 @@ class TorcsEnv:
         #
         if np.cos(obs['angle']) < 0: # Episode is terminated if the agent runs backward
             self.counterTerminate += .2
+            # episode_terminate = True
+            # client.R.d['meta'] = True
 
         if client.R.d['meta'] is True: # Send a reset signal
             self.initial_run = False

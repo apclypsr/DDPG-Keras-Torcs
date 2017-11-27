@@ -1,17 +1,14 @@
 from gym_torcs import TorcsEnv
 import numpy as np
 import random
-
-
-import pickle
 import argparse
 from keras.models import model_from_json, Model
 from keras.models import Sequential
 from keras.layers.core import Dense, Dropout, Activation, Flatten
 from keras.optimizers import Adam
 import tensorflow as tf
-#from keras.engine.training import collect_trainable_weights
 import json
+import pickle
 
 from ReplayBuffer import ReplayBuffer
 from ActorNetwork import ActorNetwork
@@ -21,7 +18,7 @@ import timeit
 
 OU = OU()       #Ornstein-Uhlenbeck Process
 
-def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
+def playGame(train_indicator=0):    #1 means Train, 0 means simply Run
     BUFFER_SIZE = 100000
     BATCH_SIZE = 32
     GAMMA = 0.99
@@ -32,18 +29,19 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
     action_dim = 3  #Steering/Acceleration/Brake
     state_dim = 29  #of sensors input
 
-    np.random.seed(61502)
+    np.random.seed(1337)
 
     vision = False
 
     EXPLORE = 100000.
-    episode_count = 600
-    max_steps = 1800
+    episode_count = 2000
+    max_steps = 100000
     reward = 0
     done = False
     step = 0
     epsilon = 1
     indicator = 0
+
     esar2 = []
     esar4 = []
 
@@ -64,10 +62,10 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
     #Now load the weight
     print("Now we load the weight")
     try:
-        actor.model.load_weights("actormodel2.h5")
-        critic.model.load_weights("criticmodel2.h5")
-        actor.target_model.load_weights("actormodel2.h5")
-        critic.target_model.load_weights("criticmodel2.h5")
+        # actor.model.load_weights("actormodel.h5")
+        # critic.model.load_weights("criticmodel.h5")
+        # actor.target_model.load_weights("actormodel.h5")
+        # critic.target_model.load_weights("criticmodel.h5")
         print("Weight load successfully")
     except:
         print("Cannot find the weight")
@@ -77,22 +75,23 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
 
         print("Episode : " + str(i) + " Replay Buffer " + str(buff.count()))
 
-        if np.mod(i, 601) == 0:
-            ob = env.reset(relaunch=True)   #relaunch TORCS every 601 episode because of the memory leak error
+        if np.mod(i, 3) == 0:
+            ob = env.reset(relaunch=True)   #relaunch TORCS every 3 episode because of the memory leak error
         else:
             ob = env.reset()
 
         s_t = np.hstack((ob.angle, ob.track, ob.trackPos, ob.speedX, ob.speedY,  ob.speedZ, ob.wheelSpinVel/100.0, ob.rpm))
      
         total_reward = 0.
+
         speed = 0
-        stepreset = 0
+        stepreset = 1
+
 
         for j in range(max_steps):
-            loss = 0
+            loss = 0 
             epsilon -= 1.0 / EXPLORE
             a_t = np.zeros([1,action_dim])
-
             noise_t = np.zeros([1,action_dim])
             
             a_t_original = actor.model.predict(s_t.reshape(1, s_t.shape[0]))
@@ -101,7 +100,7 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
             noise_t[0][2] = train_indicator * max(epsilon, 0) * OU.function(a_t_original[0][2], -0.1 , 1.00, 0.05)
 
             #The following code do the stochastic brake
-            if random.random() <= 0.05:
+            if random.random() <= 0.1:
                print("********Now we apply the brake***********")
                noise_t[0][2] = train_indicator * max(epsilon, 0) * OU.function(a_t_original[0][2],  0.2 , 1.00, 0.10)
 
@@ -126,8 +125,7 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
 
             target_q_values = critic.target_model.predict([new_states, actor.target_model.predict(new_states)])  
            
-            for k in range(len
-                               (batch)):
+            for k in range(len(batch)):
                 if dones[k]:
                     y_t[k] = rewards[k]
                 else:
@@ -143,15 +141,18 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
 
             total_reward += r_t
             s_t = s_t1
-            speed += ob.speedX*300
-            speedavg = speed/stepreset
-        
+
+            speed += ob.speedX * 300
+            speedavg = speed / stepreset
+            # print("SPEED X", ob.speedX)
+
             print("Episode", i, "Step", step, "Action", a_t, "Reward", r_t, "Loss", loss, "Average Speed", speedavg)
             esar = (i, step, a_t, r_t, loss, speedavg)
             esar2.append(esar)
-        
-            step += 1
+
             stepreset += 1
+            step += 1
+
 
             if done:
                 break
@@ -159,11 +160,11 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
         if np.mod(i, 3) == 0:
             if (train_indicator):
                 print("Now we save model")
-                actor.model.save_weights("actormodel2.h5", overwrite=True)
+                actor.model.save_weights("actormodel.h5", overwrite=True)
                 with open("actormodel.json", "w") as outfile:
                     json.dump(actor.model.to_json(), outfile)
 
-                critic.model.save_weights("criticmodel2.h5", overwrite=True)
+                critic.model.save_weights("criticmodel.h5", overwrite=True)
                 with open("criticmodel.json", "w") as outfile:
                     json.dump(critic.model.to_json(), outfile)
 
@@ -174,14 +175,13 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
         esar3 = (i, step, total_reward, speedavg)
         esar4.append(esar3)
 
-        print("Saving esars.")
-
         def save_object(obj, filename):
             with open(filename, 'wb') as output:
                 pickle.dump(obj, output, pickle.HIGHEST_PROTOCOL)
 
-        save_object(esar2, 'IntraEpisode.pkl')
-        save_object(esar4, 'InterEpisode.pkl')
+        if np.mod(i, 50) == 0:
+            save_object(esar2, 'IntraEpisode.pkl')
+            save_object(esar4, 'InterEpisode.pkl')
 
     env.end()  # This is for shutting down TORCS
     print("Finish.")

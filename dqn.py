@@ -98,8 +98,8 @@ class DeepQNetwork:
 
         print("Building network for %s trainable=%s" % (name, trainable))
 
-        # First layer takes a screen, and shrinks by 2x
-        x = tf.placeholder(tf.uint8, shape=[None, 128, 128, 4], name="screens")
+        # First layer takes a screen, and shrinks by xx
+        x = tf.placeholder(tf.uint8, shape=[None, 480, 640, 12], name="screens")
         print(x)
 
         x_normalized = tf.to_float(x) / 255.0
@@ -108,7 +108,7 @@ class DeepQNetwork:
         # Second layer convolves 32 8x8 filters with stride 4 with relu
         # lzhang02: returns 128 31x31 layers
         with tf.variable_scope("cnn1_" + name):
-            W_conv1, b_conv1 = self.makeLayerVariables([8, 8, 4, 32], trainable, "conv1")
+            W_conv1, b_conv1 = self.makeLayerVariables([64, 64, 12, 32], trainable, "conv1")
 
             h_conv1 = tf.nn.relu(tf.nn.conv2d(x_normalized, W_conv1, strides=[1, 4, 4, 1], padding='VALID') + b_conv1,
                                  name="h_conv1")
@@ -117,31 +117,39 @@ class DeepQNetwork:
         # Third layer convolves 64 4x4 filters with stride 2 with relu
         # lzhang02: change to 5x5 filter, returns 8192 14 x 14 layers
         with tf.variable_scope("cnn2_" + name):
-            W_conv2, b_conv2 = self.makeLayerVariables([5, 5, 32, 64], trainable, "conv2")
+            W_conv2, b_conv2 = self.makeLayerVariables([32, 32, 32, 64], trainable, "conv2")
 
             h_conv2 = tf.nn.relu(tf.nn.conv2d(h_conv1, W_conv2, strides=[1, 2, 2, 1], padding='VALID') + b_conv2,
                                  name="h_conv2")
             print(h_conv2)
 
-        # Fourth layer convolves 64 3x3 filters with stride 1 with relu
-        # lzhang02: change to 4x4 filter, returns
-        # with tf.variable_scope("cnn3_" + name):
-        #     W_conv3, b_conv3 = self.makeLayerVariables([4, 4, 64, 64], trainable, "conv3")
-        #
-        #     h_conv3 = tf.nn.relu(tf.nn.conv2d(h_conv2, W_conv3, strides=[1, 1, 1, 1], padding='VALID') + b_conv3,
-        #                          name="h_conv3")
-        #     print(h_conv3)
+        #Fourth layer convolves 64 3x3 filters with stride 1 with relu
+        #lzhang02: change to 8x8 filter, returns
+        with tf.variable_scope("cnn3_" + name):
+            W_conv3, b_conv3 = self.makeLayerVariables([16, 16, 64, 64], trainable, "conv3")
+
+            h_conv3 = tf.nn.relu(tf.nn.conv2d(h_conv2, W_conv3, strides=[1, 1, 1, 1], padding='VALID') + b_conv3,
+                                 name="h_conv3")
+            print(h_conv3)
+
+        with tf.variable_scope("cnn4_" + name):
+            W_conv4, b_conv4 = self.makeLayerVariables([8, 8, 64, 64], trainable, "conv4")
+
+            h_conv4 = tf.nn.relu(tf.nn.conv2d(h_conv3, W_conv4, strides=[1, 1, 1, 1], padding='VALID') + b_conv4,
+                                 name="h_conv4")
+            print(h_conv4)
 
         #flatten layer 2 instead
-        h_conv3_flat = tf.reshape(h_conv2, [-1, 14 * 14 * 64], name="h_conv3_flat")
-        print("SHAPE OF HCONV2", h_conv2)
-        print(h_conv3_flat)
+        h_conv4_flat = tf.reshape(h_conv4, [-1, 35*15*64], name="h_conv4_flat")
+        print(h_conv4_flat)
 
         # Fifth layer is fully connected with 512 relu units
         with tf.variable_scope("fc1_" + name):
-            W_fc1, b_fc1 = self.makeLayerVariables([14 * 14 * 64, 512], trainable, "fc1")
+            W_fc1, b_fc1 = self.makeLayerVariables([35*15*64, 512], trainable, "fc1")
+            print(W_fc1)
+            print(b_fc1)
 
-            h_fc1 = tf.nn.relu(tf.matmul(h_conv3_flat, W_fc1) + b_fc1, name="h_fc1")
+            h_fc1 = tf.nn.relu(tf.matmul(h_conv4_flat, W_fc1) + b_fc1, name="h_fc1")
             print(h_fc1)
 
         #We don't want to output a discrete number of actions, but rather the FC7 layer to feed into the Actor Critic Algorithm
@@ -152,7 +160,12 @@ class DeepQNetwork:
         #     y = tf.matmul(h_fc1, W_fc2) + b_fc2
         #     print(y)
 
+        print("X", x)
+        print("HFC1", h_fc1)
+
         return x, h_fc1
+
+
 
     def makeLayerVariables(self, shape, trainable, name_suffix):
         if self.normalizeWeights:
