@@ -2,7 +2,6 @@ from gym_torcs import TorcsEnv
 import numpy as np
 import random
 
-
 import pickle
 import argparse
 from keras.models import model_from_json, Model
@@ -25,9 +24,9 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
     BUFFER_SIZE = 100000
     BATCH_SIZE = 32
     GAMMA = 0.99
-    TAU = 0.001     #Target Network HyperParameters
-    LRA = 0.0001    #Learning rate for Actor
-    LRC = 0.001     #Lerning rate for Critic
+    TAU = 0.0025     #Target Network HyperParameters
+    LRA = 0.001    #Learning rate for Actor
+    LRC = 0.0025     #Lerning rate for Critic
 
     action_dim = 3  #Steering/Acceleration/Brake
     state_dim = 29  #of sensors input
@@ -77,8 +76,8 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
 
         print("Episode : " + str(i) + " Replay Buffer " + str(buff.count()))
 
-        if np.mod(i, 601) == 0:
-            ob = env.reset(relaunch=True)   #relaunch TORCS every 601 episode because of the memory leak error
+        if np.mod(i, 600) == 0:
+            ob = env.reset(relaunch=True)   #relaunch TORCS every x episode because of the memory leak error
         else:
             ob = env.reset()
 
@@ -114,7 +113,7 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
             s_t1 = np.hstack((ob.angle, ob.track, ob.trackPos, ob.speedX, ob.speedY, ob.speedZ, ob.wheelSpinVel/100.0, ob.rpm))
         
             buff.add(s_t, a_t[0], r_t, s_t1, done)      #Add replay buffer
-            
+
             #Do the batch update
             batch = buff.getBatch(BATCH_SIZE)
             states = np.asarray([e[0] for e in batch])
@@ -179,7 +178,7 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
             with open(filename, 'wb') as output:
                 pickle.dump(obj, output, pickle.HIGHEST_PROTOCOL)
 
-        save_object(esar2, 'IntraEpisode.pkl')
+        #save_object(esar2, 'IntraEpisode.pkl')
         save_object(esar4, 'InterEpisode.pkl')
 
     env.end()  # This is for shutting down TORCS

@@ -147,8 +147,8 @@ class TorcsEnv:
         reward = progress
 
         #collision detection: moved down to other condition
-        if obs['damage'] - obs_pre['damage'] > 0:
-            reward = -1
+        # if obs['damage'] - obs_pre['damage'] > 0:
+        #     reward = -1
 
         # Termination judgement #########################
         # Episode is terminated if the car is out of track
