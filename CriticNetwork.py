@@ -23,6 +23,7 @@ class CriticNetwork(object):
         self.action_size = action_size
         
         K.set_session(sess)
+        K.set_learning_phase(1)
 
         #Now create the model
         self.model, self.action, self.state = self.create_critic_network(state_size, action_size)  
@@ -47,9 +48,6 @@ class CriticNetwork(object):
         print("Now we build the model")
         # S = Input(shape=[state_size])
         # A = Input(shape=[action_dim],name='action2')
-
-        K.set_learning_phase(False)
-
         S = Input(shape=[state_size])
         A = Input(shape=[action_dim],name='action2')
         w1 = Dense(HIDDEN1_UNITS, activation='relu')(S)

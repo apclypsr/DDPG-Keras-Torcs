@@ -20,6 +20,7 @@ class ActorNetwork(object):
         self.LEARNING_RATE = LEARNING_RATE
 
         K.set_session(sess)
+        K.set_learning_phase(1)
 
         #Now create the model
         self.model, self.weights, self.state = self.create_actor_network(state_size, action_size)
@@ -46,8 +47,6 @@ class ActorNetwork(object):
     def create_actor_network(self, state_size,action_dim):
         print("Now we build the model")
         # S = Input(shape=[state_size])
-
-        K.set_learning_phase(False)
 
         S = Input(shape=[state_size])
         h0 = Dense(HIDDEN1_UNITS, activation='relu')(S)
