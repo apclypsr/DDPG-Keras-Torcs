@@ -3,8 +3,7 @@ import numpy as np
 import random
 from dqnsmall import DeepQNetwork
 from generate_training_data_lou import MyConfig
-from europilot.train import generate_training_data
-
+from europilot.train import generate_one_trainingdata
 import pickle
 import argparse
 from keras.models import model_from_json, Model
@@ -143,10 +142,10 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
 
             ob, r_t, done, info = env.step(a_t[0])
 
-            # print('GTD1SUM:', np.sum(generate_training_data(config=MyConfig)))
+            print('GTD1SUM:', np.sum(generate_one_trainingdata(config=MyConfig)))
 
             # print('GTD SHAPE', np.shape(generate_training_data(config=MyConfig)))
-            imglst.append(generate_training_data(config=MyConfig))
+            imglst.append(generate_one_trainingdata(config=MyConfig))
 
             if len(imglst) == 4:
                 imgcopy = imglst[:]
@@ -261,7 +260,7 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
 
 
         if np.mod(i, 50) == 0:
-            save_object(esar2, 'IntraEpisode.pkl')
+            #save_object(esar2, 'IntraEpisode.pkl')
             save_object(esar4, 'InterEpisode.pkl')
 
     env.end()  # This is for shutting down TORCS

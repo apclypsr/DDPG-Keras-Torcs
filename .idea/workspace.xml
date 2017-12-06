@@ -2,463 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3ac93a9-f1e2-4e72-aec6-a2c9d6220e6b" name="Default" comment="a">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ddpgIMG-V2.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dqnsmall.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/007e71a0.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/01552465.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/02ee18dd.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/038e3945.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/04c09f09.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/054d2244.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/05ce6246.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/07f017bd.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/08dedde3.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/09ff7f7d.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/0a02b5c0.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/0aa1f2dd.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/0b182121.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/0bdd4b0d.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/0c9262b3.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/0da285d3.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/0dcbb15c.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/0eb32647.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/0ed0f90b.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/0f038282.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/0f2283ef.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/100c105d.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/1158c371.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/1167a0ea.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/11f535b1.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/12404c1e.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/12e8707a.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/1315588c.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/132cb19f.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/154b5a3a.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/15ef3aff.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/164fce1b.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/1659b67d.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/16e2eadf.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/171262be.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/17687226.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/1914d818.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/195818fb.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/1a84faf6.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/1a9c5c90.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/1ac8f97f.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/1bd44dc2.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/1c301067.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/1c3406be.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/1d6589bb.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/1dcd84bc.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/1e9f71f6.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/1f0a6dce.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/1f5555d0.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/1fb33a25.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/2029bb18.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/2082faa9.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/20856be8.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/2220d956.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/2255d1cd.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/233809e8.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/23f6bcdb.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/24c54d9e.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/2526ca73.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/264d00cc.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/269a443c.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/2700e5c5.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/270a70df.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/2785c2a7.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/28882427.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/292037e5.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/29ceee30.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/2a3d96fa.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/2acbb0ac.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/2b23328d.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/2c0b7c05.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/2c65018d.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/2d60908a.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/2fa70af8.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/30b5beaa.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/30fa1422.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/3228ba59.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/335936fc.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/33bb56b3.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/344deb22.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/34dae20a.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/377b5093.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/3847074f.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/38d2734f.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/39522c5d.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/39d90bfd.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/3ac7da5a.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/3ae88c80.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/3c350c77.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/3d443c8f.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/3d8c7926.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/3da3e858.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/3ddfb6a2.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/3ea4fcd9.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/3ebf0b42.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/3efe169a.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/3fad0680.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/3ff61076.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/41593238.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/4179e38f.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/41a87b68.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/430f7a8b.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/436f7c3c.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/43b13d2c.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/442841b6.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/4525d286.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/45ccd52e.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/4708101a.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/47e40799.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/485274a8.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/48808c77.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/48905a36.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/48dad2a0.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/49101e9b.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/498f9a4b.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/49a9b2e5.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/4aa1f686.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/4add39e2.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/4aef8e8d.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/4b9ee890.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/4c32ee02.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/4c5b3a52.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/4c862e5f.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/4d7499e5.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/4da8079c.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/4f15b66a.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/4f77680b.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/4fa4dc2d.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/4fb5fe78.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/509e8d16.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/50d69fff.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/515c8678.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/5163c2ce.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/52c80b65.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/53024f11.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/53fb3a0e.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/549caef7.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/549e52be.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/54e24b7a.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/54e6e132.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/5644c22a.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/56833e98.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/56cf1c0a.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/56f293a6.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/5809ee93.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/58b9e429.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/595e3ddc.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/597a238d.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/5ad61549.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/5ae354af.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/5b4bb023.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/5b87105e.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/5cae5ec8.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/5d5cefe6.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/5e499bad.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/5f0aa506.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/60309d30.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/6052108f.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/60d2a082.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/60d8aa68.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/60e7ff9e.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/6173f69a.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/61789bef.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/61aa627c.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/61b43cf8.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/62472f7a.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/63582d5e.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/6387135e.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/647cadb7.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/661809b0.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/667d78f6.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/67c9c0e2.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/680bfed5.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/69999872.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/69bb1cbe.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/69dc1b26.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/6a0f40e2.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/6a8703f3.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/6a8fd447.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/6a9f8ce7.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/6af4b8a0.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/6b37a36a.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/6baaeea2.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/6c6a9189.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/6d21cfb2.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/6d416648.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/6d475340.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/6db16dfd.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/6e066ebb.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/6ef9299f.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/6f93616c.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/709dafe5.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/70b57ee6.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/70e16b55.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/71672091.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/72284088.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/72f9c339.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/7441aeb0.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/7444e9b1.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/74e982b1.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/753f6463.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/75fb2bca.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/7629688f.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/7821e437.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/787d5123.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/789f8e9a.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/78cecfe9.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/7915f719.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/7a6f94eb.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/7adc1fd3.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/7be9fdb4.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/7c0d904b.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/7d1b5c65.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/7d9559dc.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/7e81d92f.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/7f5421a9.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/7fd04a0c.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/82073ddf.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/8215e0b0.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/821cc1ff.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/8254abb4.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/8294548f.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/82a71374.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/831e9098.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/83d859a2.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/84767f38.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/8498885a.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/8527356f.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/852e0777.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/862a4e81.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/875ee414.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/87937dc3.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/883d6e64.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/88c74654.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/89044466.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/89b003a7.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/8b44681e.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/8bdfe070.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/8c59b2cf.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/8c8b177b.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/8cc57831.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/8d3aad92.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/8d5fbd64.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/8d6620b8.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/8e50ac9f.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/8e7a8295.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/8eaf35f8.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/8eb49e75.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/8ed19e6f.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/8fb9a440.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/905a571d.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/925bb780.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/92e4a32e.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/93302795.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/93423061.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/935032d1.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/93f424d1.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/9495ac18.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/94dac0cf.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/9551c168.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/98bacb01.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/9972911b.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/99f28ee2.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/99f9accc.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/9aaf611d.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/9b87e451.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/9cdac3b7.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/9f1fb881.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/9fa1b955.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/a0324380.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/a0988bc1.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/a1414c54.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/a192e6f9.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/a1fccb47.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/a27fa997.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/a3624dea.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/a587c960.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/a61e8e10.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/a6f215c2.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/a6fc5204.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/a7476767.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/a7740a36.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/a86bb2a7.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/a9255113.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/a974e984.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/ab1a66a5.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/ab46f331.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/ad15d9c2.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/ad69c2dd.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/ae04aa49.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/ae63a61e.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/aea0ad59.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/af2505fa.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/af7c5590.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/affd3f15.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/b04bee95.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/b11fb69c.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/b2191aaf.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/b280c2fe.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/b34f221a.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/b3f0bcb6.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/b43371ca.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/b683f64a.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/b6d0a60a.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/b6d4991c.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/b7a1ac16.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/b8ce22c7.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/ba8bd028.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/bbd5bfd7.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/bc117fdc.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/bc74c06e.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/bcc7f2e8.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/bce80891.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/bcef6fb4.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/bd20ea9a.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/bdbd3832.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/be538e85.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/bf3fab83.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/c026f251.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/c11e63bc.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/c1750896.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/c1ad1b22.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/c1d07771.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/c2089d2e.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/c24017f8.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/c294df5a.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/c2b21c66.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/c3552d9f.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/c449a0b3.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/c4d74a38.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/c5f9a7de.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/c61d5bd3.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/c6b2963d.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/c7058826.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/c84f2eee.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/c898a94c.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/c94011b0.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/c954d1c4.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/c9856a56.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/c9ab337c.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/c9af1955.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/ca36df72.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/ca763877.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/cb3f5c53.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/cb4b72d3.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/cb7c1326.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/cbf04f1f.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/cc4ff588.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/cc6aa411.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/cc6ff9bc.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/cd17459c.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/ce1f6018.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/ce8f290b.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/ceb68a72.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/cecd170f.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/cecd9bd4.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/d0862274.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/d0e95153.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/d1b8ee2b.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/d1d1d83f.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/d3125383.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/d358f44b.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/d3fec1df.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/d495c107.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/d4cdc03d.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/d5377512.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/d57c5764.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/d788e5c8.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/d814c06f.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/da2ea3b6.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/da6ea308.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/db939e8c.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/dbb7f5c1.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/dbf2d6b4.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/dc5f4c01.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/dc90c8c0.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/dcab9ef5.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/dcad0863.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/dcb0dab3.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/dd8a8e75.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/de85d599.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/ded7ea93.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/df38cd64.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/df7e9ea9.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/e0cd876b.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/e1233162.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/e149b7b4.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/e1b73d19.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/e225b2c1.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/e244758e.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/e25bbcac.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/e36d6c68.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/e4724431.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/e48f2587.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/e5a84eb8.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/e60b532d.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/e71ea4b6.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/e7e4d771.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/e8577fdb.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/e8ad4118.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/e9830324.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/eb587e46.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/ec5baf7d.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/ed18a807.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/ee2f7aa0.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/ef323963.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/ef919630.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/f1e1ee39.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/f2415601.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/f2859eb9.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/f31ced41.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/f50c9acc.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/f51b7b42.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/f51fde2f.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/f55888bc.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/f59c4d83.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/f5fc321c.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/f648f197.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/f6b73ff7.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/f70d96c9.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/f79f7277.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/f8171d03.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/faad3eff.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/fb203133.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/fb8e3f5f.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/fc378b6c.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/fcb5d2df.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/fcf14d2c.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/fec86500.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/ff163d17.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/ff307d29.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/ff652b1a.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/csv/ffacc8bb.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ddpgIMG2.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pickles/baseline_speedunl_norotate/othermap/InterEpisode.pkl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pickles/baseline_speedunl_norotate/othermap/IntraEpisode.pkl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pickles/baseline_speedunl_norotate/othermap/interepisode.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pickles/baseline_speedunl_norotate/othermap/interepisodenorm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pickles/baseline_speedunl_norotate/othermap/speed.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/weights/500 episodes regular reward/actormodel2.h5" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/weights/500 episodes regular reward/criticmodel2.h5" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InterEpisode.pkl" afterPath="$PROJECT_DIR$/InterEpisode.pkl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/IntraEpisode.pkl" afterPath="$PROJECT_DIR$/IntraEpisode.pkl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/actormodel2.h5" afterPath="$PROJECT_DIR$/actormodel2.h5" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/actormodelIMG.h5" afterPath="$PROJECT_DIR$/actormodelIMG.h5" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/criticmodel2.h5" afterPath="$PROJECT_DIR$/criticmodel2.h5" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/criticmodelIMG.h5" afterPath="$PROJECT_DIR$/criticmodelIMG.h5" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.ipynb_checkpoints/a-checkpoint.ipynb" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/a-checkpoint.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a.ipynb" afterPath="$PROJECT_DIR$/a.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/actormodel.json" afterPath="$PROJECT_DIR$/actormodel.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/criticmodel.json" afterPath="$PROJECT_DIR$/criticmodel.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ddpgMOD.py" afterPath="$PROJECT_DIR$/ddpgMOD.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ActorNetwork.py" afterPath="$PROJECT_DIR$/ActorNetwork.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CriticNetwork.py" afterPath="$PROJECT_DIR$/CriticNetwork.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ddpgIMG-V2.py" afterPath="$PROJECT_DIR$/ddpgIMG-V2.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generate_training_data_lou.py" afterPath="$PROJECT_DIR$/generate_training_data_lou.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gym_torcs.py" afterPath="$PROJECT_DIR$/gym_torcs.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -469,21 +20,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ddpgMOD.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ddpgMOD.py">
+      <file leaf-file-name="autostart.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/autostart.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="198">
+              <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ddpgIMG.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ddpgIMG.py">
+      <file leaf-file-name="ddpgMOD.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ddpgMOD.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="70" column="21" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+            <state relative-caret-position="1026">
+              <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -494,22 +45,10 @@
       <file leaf-file-name="ddpgIMG-V1.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ddpgIMG-V1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="57" column="14" lean-forward="true" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
+            <state relative-caret-position="2286">
+              <caret line="149" column="39" lean-forward="false" selection-start-line="149" selection-start-column="26" selection-end-line="149" selection-end-column="39" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="generate_training_data_lou.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/generate_training_data_lou.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-              <folding>
-                <element signature="e#25#57#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -518,8 +57,8 @@
       <file leaf-file-name="ddpgIMG-V2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ddpgIMG-V2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="149" column="0" lean-forward="true" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+            <state relative-caret-position="640">
+              <caret line="262" column="13" lean-forward="false" selection-start-line="262" selection-start-column="13" selection-end-line="262" selection-end-column="13" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -527,12 +66,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CriticNetwork.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CriticNetwork.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CriticNetwork.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="439">
+              <caret line="59" column="37" lean-forward="true" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -540,31 +81,11 @@
       <file leaf-file-name="ActorNetwork.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ActorNetwork.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dqnsmall.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dqnsmall.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2592">
-              <caret line="147" column="55" lean-forward="false" selection-start-line="147" selection-start-column="55" selection-end-line="147" selection-end-column="55" />
+            <state relative-caret-position="421">
+              <caret line="54" column="37" lean-forward="true" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dqn.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dqn.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1800">
-              <caret line="103" column="0" lean-forward="false" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -572,8 +93,8 @@
       <file leaf-file-name="autostart (copy).sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/autostart (copy).sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+            <state relative-caret-position="234">
+              <caret line="13" column="16" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -591,14 +112,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>s_t1</find>
-      <find>getFC</find>
-      <find>random.random</find>
-      <find>00789441</find>
-      <find>GTD1</find>
-      <find>216485593</find>
-      <find>105.829</find>
-      <find>98.1715</find>
       <find>108.382</find>
       <find>sumarray</find>
       <find>gtd.a</find>
@@ -611,7 +124,6 @@
       <find>train_sema</find>
       <find>generate_training</find>
       <find>print(</find>
-      <find>print</find>
       <find>csv</find>
       <find>image_filename</find>
       <find>data_path</find>
@@ -621,6 +133,15 @@
       <find>65</find>
       <find>states</find>
       <find>progress</find>
+      <find>fc7</find>
+      <find>imgfinal</find>
+      <find>generate_trai</find>
+      <find>generate</find>
+      <find>print</find>
+      <find>gtd1</find>
+      <find>sum</find>
+      <find>image</find>
+      <find>generate_one</find>
     </findStrings>
     <replaceStrings>
       <replace>2000000</replace>
@@ -651,8 +172,6 @@
         <option value="$PROJECT_DIR$/autostart (copy).sh" />
         <option value="$PROJECT_DIR$/snakeoil3_gym.py" />
         <option value="$USER_HOME$/dqn-atari/ddpgimgprocess.py" />
-        <option value="$PROJECT_DIR$/CriticNetwork.py" />
-        <option value="$PROJECT_DIR$/ActorNetwork.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/ddpg.py" />
         <option value="/usr/local/lib/python3.6/dist-packages/europilot-0.0.1-py3.6.egg/europilot/train.py" />
@@ -662,21 +181,23 @@
         <option value="$PROJECT_DIR$/generate_training_data.py" />
         <option value="$USER_HOME$/europilot/europilot/train.py" />
         <option value="$PROJECT_DIR$/ddpgIMG2.py" />
-        <option value="$PROJECT_DIR$/autostart.sh" />
-        <option value="$PROJECT_DIR$/ddpgMOD.py" />
         <option value="$PROJECT_DIR$/gym_torcs.py" />
         <option value="$PROJECT_DIR$/a.ipynb" />
         <option value="$PROJECT_DIR$/ddpgIMG-V1.py" />
         <option value="$PROJECT_DIR$/dqnsmall.py" />
         <option value="$PROJECT_DIR$/generate_training_data_lou.py" />
         <option value="$PROJECT_DIR$/ddpgIMG-V2.py" />
+        <option value="$PROJECT_DIR$/autostart.sh" />
+        <option value="$PROJECT_DIR$/ddpgMOD.py" />
+        <option value="$PROJECT_DIR$/ActorNetwork.py" />
+        <option value="$PROJECT_DIR$/CriticNetwork.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="67" />
     <option name="y" value="85" />
-    <option name="width" value="1105" />
+    <option name="width" value="1095" />
     <option name="height" value="957" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -697,6 +218,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -709,11 +231,10 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ddpgIMG-V1.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/europilot" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="Python" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/ddpgIMG-V1.py" />
   </component>
@@ -734,7 +255,41 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ddpgIMG-V2">
+  <component name="RunManager" selected="Python.ddpgMOD">
+    <configuration name="ActorNetwork" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="DDPG-Keras-Torcs" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ActorNetwork.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="CriticNetwork" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="DDPG-Keras-Torcs" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CriticNetwork.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <configuration name="DDPG-Keras-Torcs" type="Python.Ipnb" factoryName="Jupyter Notebook">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -819,23 +374,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="ddpgIMG2" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="DDPG-Keras-Torcs" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ddpgIMG2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
     <configuration name="ddpgMOD" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -870,41 +408,24 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="gym_torcs" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="DDPG-Keras-Torcs" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gym_torcs.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
     <list size="9">
       <item index="0" class="java.lang.String" itemvalue="Python.ddpgMOD" />
       <item index="1" class="java.lang.String" itemvalue="Python.ddpg" />
       <item index="2" class="java.lang.String" itemvalue="Jupyter Notebook.DDPG-Keras-Torcs" />
       <item index="3" class="java.lang.String" itemvalue="Python.ddpgIMG" />
-      <item index="4" class="java.lang.String" itemvalue="Python.ddpgIMG2" />
-      <item index="5" class="java.lang.String" itemvalue="Python.generate_training_data_lou" />
-      <item index="6" class="java.lang.String" itemvalue="Python.ddpgIMG-V2" />
-      <item index="7" class="java.lang.String" itemvalue="Python.ddpgIMG-V1" />
-      <item index="8" class="java.lang.String" itemvalue="Python.gym_torcs" />
+      <item index="4" class="java.lang.String" itemvalue="Python.generate_training_data_lou" />
+      <item index="5" class="java.lang.String" itemvalue="Python.ddpgIMG-V2" />
+      <item index="6" class="java.lang.String" itemvalue="Python.ddpgIMG-V1" />
+      <item index="7" class="java.lang.String" itemvalue="Python.CriticNetwork" />
+      <item index="8" class="java.lang.String" itemvalue="Python.ActorNetwork" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.ddpgIMG-V2" />
-        <item index="1" class="java.lang.String" itemvalue="Python.ddpgIMG-V1" />
-        <item index="2" class="java.lang.String" itemvalue="Python.gym_torcs" />
-        <item index="3" class="java.lang.String" itemvalue="Python.ddpgIMG2" />
-        <item index="4" class="java.lang.String" itemvalue="Python.generate_training_data_lou" />
+        <item index="0" class="java.lang.String" itemvalue="Python.ActorNetwork" />
+        <item index="1" class="java.lang.String" itemvalue="Python.CriticNetwork" />
+        <item index="2" class="java.lang.String" itemvalue="Python.ddpgIMG-V2" />
+        <item index="3" class="java.lang.String" itemvalue="Python.generate_training_data_lou" />
+        <item index="4" class="java.lang.String" itemvalue="Python.ddpgIMG-V1" />
       </list>
     </recent_temporary>
   </component>
@@ -936,13 +457,13 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22342148" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.250264" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.250264" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1130,13 +651,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/europilot/scripts/generate_training_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/europilot/scripts/generate_training_data.py" />
     <entry file="file://$USER_HOME$/dqn-atari/dqn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -1159,24 +674,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/europilot/europilot/joystick.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="272" column="42" lean-forward="true" selection-start-line="272" selection-start-column="42" selection-end-line="272" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/europilot/europilot/joystick.py" />
     <entry file="file:///usr/local/lib/python3.6/dist-packages/europilot-0.0.1-py3.6.egg/europilot/train.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
           <caret line="185" column="42" lean-forward="true" selection-start-line="185" selection-start-column="42" selection-end-line="185" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python3.6/dist-packages/europilot-0.0.1-py3.6.egg/europilot/joystick.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="315" column="0" lean-forward="false" selection-start-line="315" selection-start-column="0" selection-end-line="315" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1196,24 +698,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/europilot/europilot/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-29">
-          <caret line="144" column="40" lean-forward="false" selection-start-line="144" selection-start-column="31" selection-end-line="144" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/europilot/europilot/train.py" />
     <entry file="file://$PROJECT_DIR$/autostartSwitches.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autostart.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -1228,7 +717,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2466">
           <caret line="146" column="25" lean-forward="false" selection-start-line="146" selection-start-column="25" selection-end-line="146" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1239,39 +727,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ddpgMOD.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ddpgIMG.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="900">
           <caret line="70" column="21" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ddpgIMG-V1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="57" column="14" lean-forward="true" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autostart (copy).sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1279,6 +738,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1800">
           <caret line="103" column="0" lean-forward="false" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autostart (copy).sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="16" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1293,10 +759,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///usr/local/lib/python3.6/dist-packages/europilot-0.0.1-py3.6.egg/europilot/joystick.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1501">
+          <caret line="306" column="0" lean-forward="false" selection-start-line="306" selection-start-column="0" selection-end-line="306" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ddpgIMG-V1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2286">
+          <caret line="149" column="39" lean-forward="false" selection-start-line="149" selection-start-column="26" selection-end-line="149" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/generate_training_data_lou.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+        <state relative-caret-position="216">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="e#25#57#0" expanded="true" />
           </folding>
@@ -1305,27 +788,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ddpgIMG-V2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="149" column="0" lean-forward="true" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+        <state relative-caret-position="640">
+          <caret line="262" column="13" lean-forward="false" selection-start-line="262" selection-start-column="13" selection-end-line="262" selection-end-column="13" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/autostart.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ActorNetwork.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="421">
+          <caret line="54" column="37" lean-forward="true" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CriticNetwork.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="439">
+          <caret line="59" column="37" lean-forward="true" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ddpgMOD.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1026">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

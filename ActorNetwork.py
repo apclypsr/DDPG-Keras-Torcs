@@ -4,7 +4,7 @@ from keras.initializers import normal, identity, VarianceScaling
 from keras.models import model_from_json
 from keras.models import Sequential, Model
 #from keras.engine.training import collect_trainable_weights
-from keras.layers import Dense, Flatten, Input, merge, Lambda
+from keras.layers import Dense, Flatten, Input, concatenate, Activation, BatchNormalization, merge, Lambda
 from keras.optimizers import Adam
 import tensorflow as tf
 import keras.backend as K
@@ -47,12 +47,15 @@ class ActorNetwork(object):
         print("Now we build the model")
         # S = Input(shape=[state_size])
 
+        K.set_learning_phase(False)
+
         S = Input(shape=[state_size])
         h0 = Dense(HIDDEN1_UNITS, activation='relu')(S)
         h1 = Dense(HIDDEN2_UNITS, activation='relu')(h0)
-        Steering =  Dense(1,activation='tanh',init=lambda shape:VarianceScaling(scale=1e-4)(shape))(h1)
-        Acceleration =  Dense(1,activation='sigmoid',init=lambda shape:VarianceScaling(scale=1e-4)(shape))(h1)
-        Brake =  Dense(1,activation='sigmoid',init=lambda shape:VarianceScaling(scale=1e-4)(shape))(h1)
-        V = merge([Steering,Acceleration,Brake],mode='concat')          
+        h2 = BatchNormalization()(h1)
+        Steering =  Dense(1,activation='tanh',init=lambda shape:VarianceScaling(scale=1e-4)(shape))(h2)
+        Acceleration =  Dense(1,activation='sigmoid',init=lambda shape:VarianceScaling(scale=1e-4)(shape))(h2)
+        Brake =  Dense(1,activation='sigmoid',init=lambda shape:VarianceScaling(scale=1e-4)(shape))(h2)
+        V = merge([Steering,Acceleration,Brake],mode='concat')
         model = Model(input=S,output=V)
         return model, model.trainable_weights, S

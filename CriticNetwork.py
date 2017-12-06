@@ -4,7 +4,7 @@ from keras.initializers import normal, identity
 from keras.models import model_from_json, load_model
 #from keras.engine.training import collect_trainable_weights
 from keras.models import Sequential
-from keras.layers import Dense, Flatten, Input, merge, Lambda, Activation
+from keras.layers import Dense, Flatten, Input, merge, Lambda, Activation, BatchNormalization
 from keras.models import Sequential, Model
 from keras.optimizers import Adam
 import keras.backend as K
@@ -48,6 +48,8 @@ class CriticNetwork(object):
         # S = Input(shape=[state_size])
         # A = Input(shape=[action_dim],name='action2')
 
+        K.set_learning_phase(False)
+
         S = Input(shape=[state_size])
         A = Input(shape=[action_dim],name='action2')
         w1 = Dense(HIDDEN1_UNITS, activation='relu')(S)
@@ -55,7 +57,8 @@ class CriticNetwork(object):
         h1 = Dense(HIDDEN2_UNITS, activation='linear')(w1)
         h2 = merge([h1,a1],mode='sum')    
         h3 = Dense(HIDDEN2_UNITS, activation='relu')(h2)
-        V = Dense(action_dim,activation='linear')(h3)   
+        h4 = BatchNormalization()(h3)
+        V = Dense(action_dim,activation='linear')(h4)
         model = Model(input=[S,A],output=V)
         adam = Adam(lr=self.LEARNING_RATE)
         model.compile(loss='mse', optimizer=adam)
