@@ -2,14 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3ac93a9-f1e2-4e72-aec6-a2c9d6220e6b" name="Default" comment="a">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InterEpisode.pkl" afterPath="$PROJECT_DIR$/InterEpisode.pkl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/actormodel2.h5" afterPath="$PROJECT_DIR$/actormodel2.h5" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/criticmodel2.h5" afterPath="$PROJECT_DIR$/criticmodel2.h5" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/europilot" afterPath="$PROJECT_DIR$/europilot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ActorNetwork.py" afterPath="$PROJECT_DIR$/ActorNetwork.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CriticNetwork.py" afterPath="$PROJECT_DIR$/CriticNetwork.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/actormodel.json" afterPath="$PROJECT_DIR$/actormodel.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/criticmodel.json" afterPath="$PROJECT_DIR$/criticmodel.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/autostartorig.sh" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/a-checkpoint.ipynb" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/a-checkpoint.ipynb" />
+      <change beforePath="$PROJECT_DIR$/ActorNetwork.py" afterPath="$PROJECT_DIR$/ActorNetwork.py" />
+      <change beforePath="$PROJECT_DIR$/CriticNetwork.py" afterPath="$PROJECT_DIR$/CriticNetwork.py" />
+      <change beforePath="$PROJECT_DIR$/InterEpisode.pkl" afterPath="$PROJECT_DIR$/InterEpisode.pkl" />
+      <change beforePath="$PROJECT_DIR$/a.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/actormodel.json" afterPath="$PROJECT_DIR$/actormodel.json" />
+      <change beforePath="$PROJECT_DIR$/actormodel2.h5" afterPath="$PROJECT_DIR$/actormodel2.h5" />
+      <change beforePath="$PROJECT_DIR$/autostart.sh" afterPath="$PROJECT_DIR$/autostart.sh" />
+      <change beforePath="$PROJECT_DIR$/criticmodel.json" afterPath="$PROJECT_DIR$/criticmodel.json" />
+      <change beforePath="$PROJECT_DIR$/criticmodel2.h5" afterPath="$PROJECT_DIR$/criticmodel2.h5" />
+      <change beforePath="$PROJECT_DIR$/ddpgMOD.py" afterPath="$PROJECT_DIR$/ddpgMOD.py" />
+      <change beforePath="$PROJECT_DIR$/dqnsmall.py" afterPath="$PROJECT_DIR$/dqnsmall.py" />
+      <change beforePath="$PROJECT_DIR$/europilot" afterPath="$PROJECT_DIR$/europilot" />
+      <change beforePath="$PROJECT_DIR$/gym_torcs.py" afterPath="$PROJECT_DIR$/gym_torcs.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,28 +31,28 @@
       <file leaf-file-name="autostart.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/autostart.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+            <state relative-caret-position="450">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ddpgMOD.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="autostart (copy).sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/autostart (copy).sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="11" column="15" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ddpgMOD.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ddpgMOD.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ddpgIMG-V1.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ddpgIMG-V1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2286">
-              <caret line="149" column="39" lean-forward="false" selection-start-line="149" selection-start-column="26" selection-end-line="149" selection-end-column="39" />
+            <state relative-caret-position="223">
+              <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -55,8 +63,8 @@
       <file leaf-file-name="ddpgIMG-V2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ddpgIMG-V2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="262" column="13" lean-forward="false" selection-start-line="262" selection-start-column="13" selection-end-line="262" selection-end-column="13" />
+            <state relative-caret-position="2365">
+              <caret line="200" column="28" lean-forward="false" selection-start-line="200" selection-start-column="28" selection-end-line="200" selection-end-column="28" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -64,11 +72,50 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="dqnsmall.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dqnsmall.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3384">
+              <caret line="191" column="16" lean-forward="false" selection-start-line="191" selection-start-column="16" selection-end-line="191" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="generate_training_data_lou.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/generate_training_data_lou.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="13" column="42" lean-forward="false" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gym_torcs.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gym_torcs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="192" column="37" lean-forward="true" selection-start-line="192" selection-start-column="37" selection-end-line="192" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Results.ipynb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Results.ipynb">
+          <provider selected="true" editor-type-id="ipnb-editor">
+            <state>
+              <selected id="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="CriticNetwork.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CriticNetwork.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="23" column="8" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+            <state relative-caret-position="270">
+              <caret line="25" column="9" lean-forward="false" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -79,21 +126,11 @@
       <file leaf-file-name="ActorNetwork.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ActorNetwork.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+            <state relative-caret-position="234">
+              <caret line="22" column="9" lean-forward="false" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="autostart (copy).sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autostart (copy).sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="16" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -110,15 +147,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>108.382</find>
-      <find>sumarray</find>
-      <find>gtd.a</find>
-      <find>gtd1sum</find>
-      <find>lzhang02</find>
-      <find>import uinpu</find>
-      <find>generate_</find>
-      <find>return</find>
-      <find>generate_train</find>
       <find>train_sema</find>
       <find>generate_training</find>
       <find>print(</find>
@@ -139,7 +167,16 @@
       <find>gtd1</find>
       <find>sum</find>
       <find>image</find>
+      <find>scr</find>
+      <find>server</find>
+      <find>epsi</find>
       <find>generate_one</find>
+      <find>deepq</find>
+      <find>buildNet</find>
+      <find>generate_</find>
+      <find>getFC7</find>
+      <find>buildne</find>
+      <find>getFC</find>
     </findStrings>
     <replaceStrings>
       <replace>2000000</replace>
@@ -179,24 +216,24 @@
         <option value="$PROJECT_DIR$/generate_training_data.py" />
         <option value="$USER_HOME$/europilot/europilot/train.py" />
         <option value="$PROJECT_DIR$/ddpgIMG2.py" />
-        <option value="$PROJECT_DIR$/gym_torcs.py" />
-        <option value="$PROJECT_DIR$/a.ipynb" />
         <option value="$PROJECT_DIR$/ddpgIMG-V1.py" />
-        <option value="$PROJECT_DIR$/dqnsmall.py" />
         <option value="$PROJECT_DIR$/generate_training_data_lou.py" />
         <option value="$PROJECT_DIR$/ddpgIMG-V2.py" />
+        <option value="$PROJECT_DIR$/CriticNetwork.py" />
+        <option value="$PROJECT_DIR$/ActorNetwork.py" />
+        <option value="$PROJECT_DIR$/gym_torcs.py" />
+        <option value="$PROJECT_DIR$/dqnsmall.py" />
         <option value="$PROJECT_DIR$/autostart.sh" />
         <option value="$PROJECT_DIR$/ddpgMOD.py" />
-        <option value="$PROJECT_DIR$/ActorNetwork.py" />
-        <option value="$PROJECT_DIR$/CriticNetwork.py" />
+        <option value="$PROJECT_DIR$/a.ipynb" />
+        <option value="$PROJECT_DIR$/Results.ipynb" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="67" />
-    <option name="y" value="85" />
-    <option name="width" value="1095" />
-    <option name="height" value="957" />
+    <option name="y" value="25" />
+    <option name="width" value="1085" />
+    <option name="height" value="961" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -216,7 +253,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -228,7 +265,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -270,6 +307,7 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="CriticNetwork" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -287,22 +325,7 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
-    <configuration name="DDPG-Keras-Torcs" type="Python.Ipnb" factoryName="Jupyter Notebook">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="DDPG-Keras-Torcs" />
-      <option name="additionalOptions" value="" />
-      <option name="ipnbHost" value="127.0.0.1" />
-      <option name="ipnbPort" value="8888" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="ddpg" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -320,23 +343,7 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
-    <configuration name="ddpgIMG-V1" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="DDPG-Keras-Torcs" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ddpgIMG-V1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="ddpgIMG-V2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -354,6 +361,7 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="ddpgIMG" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -371,6 +379,7 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="ddpgMOD" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -388,6 +397,25 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="dqnsmall" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="DDPG-Keras-Torcs" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dqnsmall.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="generate_training_data_lou" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -405,6 +433,23 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="DDPG-Keras-Torcs" type="Python.Ipnb" factoryName="Jupyter Notebook">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="DDPG-Keras-Torcs" />
+      <option name="additionalOptions" value="" />
+      <option name="ipnbHost" value="127.0.0.1" />
+      <option name="ipnbPort" value="8888" />
     </configuration>
     <list size="9">
       <item index="0" class="java.lang.String" itemvalue="Python.ddpgMOD" />
@@ -413,22 +458,25 @@
       <item index="3" class="java.lang.String" itemvalue="Python.ddpgIMG" />
       <item index="4" class="java.lang.String" itemvalue="Python.generate_training_data_lou" />
       <item index="5" class="java.lang.String" itemvalue="Python.ddpgIMG-V2" />
-      <item index="6" class="java.lang.String" itemvalue="Python.ddpgIMG-V1" />
-      <item index="7" class="java.lang.String" itemvalue="Python.CriticNetwork" />
-      <item index="8" class="java.lang.String" itemvalue="Python.ActorNetwork" />
+      <item index="6" class="java.lang.String" itemvalue="Python.CriticNetwork" />
+      <item index="7" class="java.lang.String" itemvalue="Python.ActorNetwork" />
+      <item index="8" class="java.lang.String" itemvalue="Python.dqnsmall" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.ActorNetwork" />
-        <item index="1" class="java.lang.String" itemvalue="Python.CriticNetwork" />
-        <item index="2" class="java.lang.String" itemvalue="Python.ddpgIMG-V2" />
-        <item index="3" class="java.lang.String" itemvalue="Python.generate_training_data_lou" />
-        <item index="4" class="java.lang.String" itemvalue="Python.ddpgIMG-V1" />
+        <item index="0" class="java.lang.String" itemvalue="Python.dqnsmall" />
+        <item index="1" class="java.lang.String" itemvalue="Python.ddpgIMG-V2" />
+        <item index="2" class="java.lang.String" itemvalue="Python.generate_training_data_lou" />
+        <item index="3" class="java.lang.String" itemvalue="Python.ActorNetwork" />
+        <item index="4" class="java.lang.String" itemvalue="Python.CriticNetwork" />
       </list>
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -449,20 +497,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="85" width="1853" height="1055" extended-state="6" />
+    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22342148" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.250264" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.250264" sideWeight="0.5018888" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.250264" sideWeight="0.49811116" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -470,6 +517,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -506,20 +554,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ddpg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/snakeoil3_gym.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10116">
-          <caret line="562" column="19" lean-forward="true" selection-start-line="562" selection-start-column="19" selection-end-line="562" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/keras/engine/topology.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
@@ -620,13 +654,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/snakeoil3_gym.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="174" column="43" lean-forward="false" selection-start-line="174" selection-start-column="43" selection-end-line="174" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ReplayBuffer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -697,31 +724,10 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/europilot/europilot/train.py" />
-    <entry file="file://$PROJECT_DIR$/autostartSwitches.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ddpg.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1664">
           <caret line="54" column="24" lean-forward="true" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gym_torcs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2466">
-          <caret line="146" column="25" lean-forward="false" selection-start-line="146" selection-start-column="25" selection-end-line="146" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/a.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
         </state>
       </provider>
     </entry>
@@ -739,24 +745,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autostart (copy).sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="16" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dqnsmall.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2592">
-          <caret line="147" column="55" lean-forward="false" selection-start-line="147" selection-start-column="55" selection-end-line="147" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#11#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/lib/python3.6/dist-packages/europilot-0.0.1-py3.6.egg/europilot/joystick.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1501">
@@ -768,44 +756,35 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2286">
           <caret line="149" column="39" lean-forward="false" selection-start-line="149" selection-start-column="26" selection-end-line="149" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generate_training_data_lou.py">
+    <entry file="file://$PROJECT_DIR$/autostartSwitches.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#25#57#0" expanded="false" />
-          </folding>
+          <caret line="12" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ddpgIMG-V2.py">
+    <entry file="file://$PROJECT_DIR$/snakeoil3_gym.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="262" column="13" lean-forward="false" selection-start-line="262" selection-start-column="13" selection-end-line="262" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-2376">
+          <caret line="9" column="51" lean-forward="false" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autostart.sh">
+    <entry file="file://$PROJECT_DIR$/autostartorig.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+          <caret line="11" column="16" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ActorNetwork.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+        <state relative-caret-position="234">
+          <caret line="22" column="9" lean-forward="false" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -814,19 +793,85 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CriticNetwork.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="8" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+        <state relative-caret-position="270">
+          <caret line="25" column="9" lean-forward="false" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/generate_training_data_lou.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="13" column="42" lean-forward="false" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dqnsmall.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3384">
+          <caret line="191" column="16" lean-forward="false" selection-start-line="191" selection-start-column="16" selection-end-line="191" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ddpgIMG-V2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2365">
+          <caret line="200" column="28" lean-forward="false" selection-start-line="200" selection-start-column="28" selection-end-line="200" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autostart (copy).sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="15" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autostart.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ddpgMOD.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        <state relative-caret-position="223">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gym_torcs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="192" column="37" lean-forward="true" selection-start-line="192" selection-start-column="37" selection-end-line="192" selection-end-column="37" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Results.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="8" />
         </state>
       </provider>
     </entry>

@@ -24,9 +24,9 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
     BUFFER_SIZE = 100000
     BATCH_SIZE = 32
     GAMMA = 0.99
-    TAU = 0.0025     #Target Network HyperParameters
-    LRA = 0.001    #Learning rate for Actor
-    LRC = 0.0025     #Lerning rate for Critic
+    TAU = 0.001      #Target Network HyperParameters
+    LRA = 0.0001    #Learning rate for Actor
+    LRC = 0.001     #Lerning rate for Critic
 
     action_dim = 3  #Steering/Acceleration/Brake
     state_dim = 29  #of sensors input
@@ -36,7 +36,7 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
     vision = False
 
     EXPLORE = 100000.
-    episode_count = 600
+    episode_count = 800
     max_steps = 1800
     reward = 0
     done = False
@@ -54,6 +54,7 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
     K.set_session(sess)
 
     actor = ActorNetwork(sess, state_dim, action_dim, BATCH_SIZE, TAU, LRA)
+
     critic = CriticNetwork(sess, state_dim, action_dim, BATCH_SIZE, TAU, LRC)
     buff = ReplayBuffer(BUFFER_SIZE)    #Create replay buffer
 
@@ -63,13 +64,17 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
     #Now load the weight
     print("Now we load the weight")
     try:
-        # actor.model.load_weights("actormodel2.h5")
-        # critic.model.load_weights("criticmodel2.h5")
-        # actor.target_model.load_weights("actormodel2.h5")
-        # critic.target_model.load_weights("criticmodel2.h5")
+        actor.model.load_weights("actormodel2.h5")
+        critic.model.load_weights("criticmodel2.h5")
+        actor.target_model.load_weights("actormodel2.h5")
+        critic.target_model.load_weights("criticmodel2.h5")
         print("Weight load successfully")
+        indicator = 1
     except:
         print("Cannot find the weight")
+
+    # if indicator == 1:
+    #     epsilon = 0.1
 
     print("TORCS Experiment Start.")
     for i in range(episode_count):
@@ -89,6 +94,7 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
 
         for j in range(max_steps):
             loss = 0
+
             epsilon -= 1.0 / EXPLORE
             a_t = np.zeros([1,action_dim])
 
@@ -158,6 +164,7 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
             if (train_indicator):
                 print("Now we save model")
                 actor.model.save_weights("actormodel2.h5", overwrite=True)
+
                 with open("actormodel.json", "w") as outfile:
                     json.dump(actor.model.to_json(), outfile)
 

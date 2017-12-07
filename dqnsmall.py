@@ -160,8 +160,8 @@ class DeepQNetwork:
         #     y = tf.matmul(h_fc1, W_fc2) + b_fc2
         #     print(y)
 
-        print("X", x)
-        print("HFC1", h_fc1)
+        print("X LOU", x)
+        print("HFC1 LOU", h_fc1)
 
         return x, h_fc1
 
@@ -188,6 +188,7 @@ class DeepQNetwork:
 
     def getFC7(self, screens):
         y = self.sess.run([self.y], {self.x: screens})
+        print('GETFC7 X', self.x)
         return y
 
     def train(self, batch, stepNumber):
@@ -232,5 +233,5 @@ if __name__ == "__main__":
 
     print(args["save_model_freq"])
 
-    C= DeepQNetwork(19, '/home/lou/DDPG-Keras-Torcs', args=args)
+    C= DeepQNetwork(512, tf.Session(config=tf.ConfigProto()), '/home/lou/DDPG-Keras-Torcs', args=args)
     print(C)

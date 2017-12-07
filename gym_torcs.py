@@ -180,7 +180,7 @@ class TorcsEnv:
         #        client.R.d['meta'] = True
         #
         if np.cos(obs['angle']) < 0: # Episode is terminated if the agent runs backward
-            self.counterTerminate += .2
+            self.counterTerminate += 1
             # episode_terminate = True
             # client.R.d['meta'] = True
 
@@ -189,6 +189,10 @@ class TorcsEnv:
             client.respond_to_server()
 
         self.time_step += 1
+
+        if self.counterTerminate > 0:
+            self.counterTerminate -= .1
+
         print('Speed: ', obs['speedX'])
         return self.get_obs(), reward, client.R.d['meta'], {}
 
