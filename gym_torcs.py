@@ -30,6 +30,8 @@ class TorcsEnv:
         time.sleep(0.5)
         if self.vision is True:
             os.system('torcs -nofuel -nodamage -vision &')
+            #os.system('torcs -nofuel -nodamage -vision -t 20000000 &')
+
         else:
             os.system('torcs -nofuel &')
         time.sleep(0.5)
@@ -40,10 +42,8 @@ class TorcsEnv:
         # Modify here if you use multiple tracks in the environment
         self.client = snakeoil3.Client(p=3101, vision=self.vision)  # Open new UDP in vtorcs
         self.client.MAX_STEPS = np.inf
-
         client = self.client
         client.get_servers_input()  # Get the initial input from torcs
-
         obs = client.S.d  # Get the current full-observation from torcs
         """
         if throttle is False:
@@ -290,7 +290,7 @@ class TorcsEnv:
                      'speedX', 'speedY', 'speedZ', 'angle', 'damage',
                      'opponents',
                      'rpm',
-                     'track', 
+                     'track',
                      'trackPos',
                      'trackDist',
                      'wheelSpinVel']

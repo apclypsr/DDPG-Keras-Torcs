@@ -86,10 +86,10 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
     #Now load the weight
     print("Now we load the weight")
     try:
-        actor.model.load_weights("actormodelIMG.h5")
-        critic.model.load_weights("criticmodelIMG.h5")
-        actor.target_model.load_weights("actormodelIMG.h5")
-        critic.target_model.load_weights("criticmodelIMG.h5")
+        # actor.model.load_weights("actormodelIMG.h5")
+        # critic.model.load_weights("criticmodelIMG.h5")
+        # actor.target_model.load_weights("actormodelIMG.h5")
+        # critic.target_model.load_weights("criticmodelIMG.h5")
         print("Weight load successfully")
     except:
         print("Cannot find the weight")
@@ -142,7 +142,7 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
 
             ob, r_t, done, info = env.step(a_t[0])
 
-            print('GTD1SUM:', np.sum(generate_one_trainingdata(config=MyConfig)))
+            # print('GTD1SUM:', np.sum(generate_one_trainingdata(config=MyConfig)))
 
             # print('GTD SHAPE', np.shape(generate_training_data(config=MyConfig)))
             imglst.append(generate_one_trainingdata(config=MyConfig))

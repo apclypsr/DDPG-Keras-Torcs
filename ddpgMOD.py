@@ -9,7 +9,7 @@ from keras.models import Sequential
 from keras.layers.core import Dense, Dropout, Activation, Flatten
 from keras.optimizers import Adam
 import tensorflow as tf
-#from keras.engine.training import collect_trainable_weights
+# from keras.engine.training import collect_trainable_weights
 import json
 
 from ReplayBuffer import ReplayBuffer
@@ -18,18 +18,19 @@ from CriticNetwork import CriticNetwork
 from OU import OU
 import timeit
 
-OU = OU()       #Ornstein-Uhlenbeck Process
+OU = OU()  # Ornstein-Uhlenbeck Process
 
-def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
+
+def playGame(train_indicator=1):  # 1 means Train, 0 means simply Run
     BUFFER_SIZE = 100000
     BATCH_SIZE = 32
     GAMMA = 0.99
-    TAU = 0.001      #Target Network HyperParameters
-    LRA = 0.0001    #Learning rate for Actor
-    LRC = 0.001     #Lerning rate for Critic
+    TAU = 0.001  # Target Network HyperParameters
+    LRA = 0.0001  # Learning rate for Actor
+    LRC = 0.001  # Lerning rate for Critic
 
-    action_dim = 3  #Steering/Acceleration/Brake
-    state_dim = 29  #of sensors input
+    action_dim = 3  # Steering/Acceleration/Brake
+    state_dim = 29  # of sensors input
 
     np.random.seed(1337)
 
@@ -46,7 +47,7 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
     esar2 = []
     esar4 = []
 
-    #Tensorflow GPU optimization
+    # Tensorflow GPU optimization
     config = tf.ConfigProto()
     config.gpu_options.allow_growth = True
     sess = tf.Session(config=config)
@@ -56,12 +57,12 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
     actor = ActorNetwork(sess, state_dim, action_dim, BATCH_SIZE, TAU, LRA)
 
     critic = CriticNetwork(sess, state_dim, action_dim, BATCH_SIZE, TAU, LRC)
-    buff = ReplayBuffer(BUFFER_SIZE)    #Create replay buffer
+    buff = ReplayBuffer(BUFFER_SIZE)  # Create replay buffer
 
     # Generate a Torcs environment
-    env = TorcsEnv(vision=vision, throttle=True,gear_change=False)
+    env = TorcsEnv(vision=vision, throttle=True, gear_change=False)
 
-    #Now load the weight
+    # Now load the weight
     print("Now we load the weight")
     try:
         actor.model.load_weights("actormodel2.h5")
@@ -82,12 +83,13 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
         print("Episode : " + str(i) + " Replay Buffer " + str(buff.count()))
 
         if np.mod(i, 600) == 0:
-            ob = env.reset(relaunch=True)   #relaunch TORCS every x episode because of the memory leak error
+            ob = env.reset(relaunch=True)  # relaunch TORCS every x episode because of the memory leak error
         else:
             ob = env.reset()
 
-        s_t = np.hstack((ob.angle, ob.track, ob.trackPos, ob.speedX, ob.speedY,  ob.speedZ, ob.wheelSpinVel/100.0, ob.rpm))
-     
+        s_t = np.hstack(
+            (ob.angle, ob.track, ob.trackPos, ob.speedX, ob.speedY, ob.speedZ, ob.wheelSpinVel / 100.0, ob.rpm))
+
         total_reward = 0.
         speed = 0
         stepreset = 0
@@ -96,19 +98,19 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
             loss = 0
 
             epsilon -= 1.0 / EXPLORE
-            a_t = np.zeros([1,action_dim])
+            a_t = np.zeros([1, action_dim])
 
-            noise_t = np.zeros([1,action_dim])
-            
+            noise_t = np.zeros([1, action_dim])
+
             a_t_original = actor.model.predict(s_t.reshape(1, s_t.shape[0]))
-            noise_t[0][0] = train_indicator * max(epsilon, 0) * OU.function(a_t_original[0][0],  0.0 , 0.60, 0.30)
-            noise_t[0][1] = train_indicator * max(epsilon, 0) * OU.function(a_t_original[0][1],  0.5 , 1.00, 0.10)
-            noise_t[0][2] = train_indicator * max(epsilon, 0) * OU.function(a_t_original[0][2], -0.1 , 1.00, 0.05)
+            noise_t[0][0] = train_indicator * max(epsilon, 0) * OU.function(a_t_original[0][0], 0.0, 0.60, 0.30)
+            noise_t[0][1] = train_indicator * max(epsilon, 0) * OU.function(a_t_original[0][1], 0.5, 1.00, 0.10)
+            noise_t[0][2] = train_indicator * max(epsilon, 0) * OU.function(a_t_original[0][2], -0.1, 1.00, 0.05)
 
-            #The following code do the stochastic brake
+            # The following code do the stochastic brake
             if random.random() <= 0.05:
-               print("********Now we apply the brake***********")
-               noise_t[0][2] = train_indicator * max(epsilon, 0) * OU.function(a_t_original[0][2],  0.2 , 1.00, 0.10)
+                print("********Now we apply the brake***********")
+                noise_t[0][2] = train_indicator * max(epsilon, 0) * OU.function(a_t_original[0][2], 0.2, 1.00, 0.10)
 
             a_t[0][0] = a_t_original[0][0] + noise_t[0][0]
             a_t[0][1] = a_t_original[0][1] + noise_t[0][1]
@@ -116,11 +118,12 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
 
             ob, r_t, done, info = env.step(a_t[0])
 
-            s_t1 = np.hstack((ob.angle, ob.track, ob.trackPos, ob.speedX, ob.speedY, ob.speedZ, ob.wheelSpinVel/100.0, ob.rpm))
-        
-            buff.add(s_t, a_t[0], r_t, s_t1, done)      #Add replay buffer
+            s_t1 = np.hstack(
+                (ob.angle, ob.track, ob.trackPos, ob.speedX, ob.speedY, ob.speedZ, ob.wheelSpinVel / 100.0, ob.rpm))
 
-            #Do the batch update
+            buff.add(s_t, a_t[0], r_t, s_t1, done)  # Add replay buffer
+
+            # Do the batch update
             batch = buff.getBatch(BATCH_SIZE)
             states = np.asarray([e[0] for e in batch])
             actions = np.asarray([e[1] for e in batch])
@@ -129,16 +132,16 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
             dones = np.asarray([e[4] for e in batch])
             y_t = np.asarray([e[1] for e in batch])
 
-            target_q_values = critic.target_model.predict([new_states, actor.target_model.predict(new_states)])  
-           
+            target_q_values = critic.target_model.predict([new_states, actor.target_model.predict(new_states)])
+
             for k in range(len(batch)):
                 if dones[k]:
                     y_t[k] = rewards[k]
                 else:
-                    y_t[k] = rewards[k] + GAMMA*target_q_values[k]
-       
+                    y_t[k] = rewards[k] + GAMMA * target_q_values[k]
+
             if (train_indicator):
-                loss += critic.model.train_on_batch([states,actions], y_t) 
+                loss += critic.model.train_on_batch([states, actions], y_t)
                 a_for_grad = actor.model.predict(states)
                 grads = critic.gradients(states, a_for_grad)
                 actor.train(states, grads)
@@ -147,13 +150,13 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
 
             total_reward += r_t
             s_t = s_t1
-            speed += ob.speedX*300
-            speedavg = speed/stepreset
-        
+            speed += ob.speedX * 300
+            speedavg = speed / stepreset
+
             print("Episode", i, "Step", step, "Action", a_t, "Reward", r_t, "Loss", loss, "Average Speed", speedavg)
             esar = (i, step, a_t, r_t, loss, speedavg)
             esar2.append(esar)
-        
+
             step += 1
             stepreset += 1
 
@@ -172,7 +175,7 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
                 with open("criticmodel.json", "w") as outfile:
                     json.dump(critic.model.to_json(), outfile)
 
-        print("TOTAL REWARD @ " + str(i) +"-th Episode  : Reward " + str(total_reward))
+        print("TOTAL REWARD @ " + str(i) + "-th Episode  : Reward " + str(total_reward))
         print("Total Step: " + str(step))
         print("")
 
@@ -185,11 +188,12 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
             with open(filename, 'wb') as output:
                 pickle.dump(obj, output, pickle.HIGHEST_PROTOCOL)
 
-        #save_object(esar2, 'IntraEpisode.pkl')
+        # save_object(esar2, 'IntraEpisode.pkl')
         save_object(esar4, 'InterEpisode.pkl')
 
     env.end()  # This is for shutting down TORCS
     print("Finish.")
+
 
 if __name__ == "__main__":
     playGame()

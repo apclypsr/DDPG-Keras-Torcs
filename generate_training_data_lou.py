@@ -8,7 +8,8 @@ class MyConfig(Config):
     # Screen area
     BOX = Box(60, 60, 220, 220)
     # Screen capture fps
-    DEFAULT_FPS = 100
+    DEFAULT_FPS = 60
 
-
-print(generate_one_trainingdata(MyConfig))
+for i in range(1000):
+    print(i)
+    print(generate_one_trainingdata(MyConfig))
