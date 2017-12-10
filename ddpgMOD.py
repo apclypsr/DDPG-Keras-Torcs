@@ -25,9 +25,9 @@ def playGame(train_indicator=1):  # 1 means Train, 0 means simply Run
     BUFFER_SIZE = 100000
     BATCH_SIZE = 32
     GAMMA = 0.99
-    TAU = 0.001  # Target Network HyperParameters
-    LRA = 0.0001  # Learning rate for Actor
-    LRC = 0.001  # Lerning rate for Critic
+    TAU = 0.00025  # Target Network HyperParameters
+    LRA = 0.000025  # Learning rate for Actor
+    LRC = 0.00025  # Lerning rate for Critic
 
     action_dim = 3  # Steering/Acceleration/Brake
     state_dim = 29  # of sensors input
@@ -37,7 +37,7 @@ def playGame(train_indicator=1):  # 1 means Train, 0 means simply Run
     vision = False
 
     EXPLORE = 100000.
-    episode_count = 800
+    episode_count = 4000
     max_steps = 1800
     reward = 0
     done = False
@@ -65,10 +65,10 @@ def playGame(train_indicator=1):  # 1 means Train, 0 means simply Run
     # Now load the weight
     print("Now we load the weight")
     try:
-        actor.model.load_weights("actormodel2.h5")
-        critic.model.load_weights("criticmodel2.h5")
-        actor.target_model.load_weights("actormodel2.h5")
-        critic.target_model.load_weights("criticmodel2.h5")
+        # actor.model.load_weights("actormodel2.h5")
+        # critic.model.load_weights("criticmodel2.h5")
+        # actor.target_model.load_weights("actormodel2.h5")
+        # critic.target_model.load_weights("criticmodel2.h5")
         print("Weight load successfully")
         indicator = 1
     except:

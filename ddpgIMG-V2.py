@@ -30,9 +30,9 @@ def playGame(train_indicator=1):    #1 means Train, 0 means simply Run
     BUFFER_SIZE = 100000
     BATCH_SIZE = 32
     GAMMA = 0.99
-    TAU = 0.001     #Target Network HyperParameters
-    LRA = 0.0001    #Learning rate for Actor
-    LRC = 0.001     #Lerning rate for Critic
+    TAU = 0.0005     #Target Network HyperParameters
+    LRA = 0.00005    #Learning rate for Actor
+    LRC = 0.0005     #Lerning rate for Critic
 
     action_dim = 3  #Steering/Acceleration/Brake
 

@@ -20,7 +20,7 @@ class ActorNetwork(object):
         self.LEARNING_RATE = LEARNING_RATE
 
         K.set_session(sess)
-        #K.set_learning_phase(1)
+        K.set_learning_phase(1)
 
         #Now create the model
         self.model, self.weights, self.state = self.create_actor_network(state_size, action_size)
@@ -51,7 +51,7 @@ class ActorNetwork(object):
         S = Input(shape=[state_size])
         h0 = Dense(HIDDEN1_UNITS, activation='relu')(S)
         h1 = Dense(HIDDEN2_UNITS, activation='relu')(h0)
-        #h1 = BatchNormalization()(h1)
+        h1 = BatchNormalization()(h1)
         Steering =  Dense(1,activation='tanh',init=lambda shape:VarianceScaling(scale=1e-4)(shape))(h1)
         Acceleration =  Dense(1,activation='sigmoid',init=lambda shape:VarianceScaling(scale=1e-4)(shape))(h1)
         Brake =  Dense(1,activation='sigmoid',init=lambda shape:VarianceScaling(scale=1e-4)(shape))(h1)

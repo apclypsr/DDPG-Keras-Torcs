@@ -23,7 +23,7 @@ class CriticNetwork(object):
         self.action_size = action_size
         
         K.set_session(sess)
-        #K.set_learning_phase(1)
+        K.set_learning_phase(1)
 
         #Now create the model
         self.model, self.action, self.state = self.create_critic_network(state_size, action_size)  
@@ -55,7 +55,7 @@ class CriticNetwork(object):
         h1 = Dense(HIDDEN2_UNITS, activation='linear')(w1)
         h2 = merge([h1,a1],mode='sum')    
         h3 = Dense(HIDDEN2_UNITS, activation='relu')(h2)
-        #h3 = BatchNormalization()(h3)
+        h3 = BatchNormalization()(h3)
         V = Dense(action_dim,activation='linear')(h3)
         model = Model(input=[S,A],output=V)
         adam = Adam(lr=self.LEARNING_RATE)
